@@ -1,7 +1,7 @@
 /*Bohdan Pysarenko © All right reserved.
  *
  */
-package com.castelli.springdemo.exception;
+package com.castilleresources.springdemo.exception;
 
 import java.util.Date;
 

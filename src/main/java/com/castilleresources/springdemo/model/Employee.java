@@ -1,7 +1,7 @@
 /*Bohdan Pysarenko © All right reserved.
  *
  */
-package com.castelli.springdemo.model;
+package com.castilleresources.springdemo.model;
 
 import javax.persistence.*;
 

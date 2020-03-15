@@ -1,7 +1,7 @@
 /*Bohdan Pysarenko © All right reserved.
  *
  */
-package com.castelli.springdemo;
+package com.castilleresources.springdemo;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

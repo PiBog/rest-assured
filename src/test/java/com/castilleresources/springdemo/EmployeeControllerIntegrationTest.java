@@ -1,12 +1,12 @@
 /*Bohdan Pysarenko © All right reserved.
  *
  */
-package com.castelli.springdemo;
+package com.castilleresources.springdemo;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 
-import com.castelli.springdemo.model.Employee;
+import com.castilleresources.springdemo.model.Employee;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;

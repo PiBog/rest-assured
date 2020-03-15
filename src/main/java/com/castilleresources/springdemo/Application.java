@@ -1,7 +1,7 @@
 /*Bohdan Pysarenko © All right reserved.
  *
  */
-package com.castelli.springdemo;
+package com.castilleresources.springdemo;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

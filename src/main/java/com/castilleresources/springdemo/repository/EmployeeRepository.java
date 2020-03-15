@@ -1,9 +1,9 @@
 /*Bohdan Pysarenko © All right reserved.
  *
  */
-package com.castelli.springdemo.repository;
+package com.castilleresources.springdemo.repository;
 
-import com.castelli.springdemo.model.Employee;
+import com.castilleresources.springdemo.model.Employee;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

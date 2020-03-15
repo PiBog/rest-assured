@@ -1,11 +1,11 @@
 /*Bohdan Pysarenko © All right reserved.
  *
  */
-package com.castelli.springdemo.controller;
+package com.castilleresources.springdemo.controller;
 
-import com.castelli.springdemo.exception.ResourceNotFoundException;
-import com.castelli.springdemo.model.Employee;
-import com.castelli.springdemo.repository.EmployeeRepository;
+import com.castilleresources.springdemo.exception.ResourceNotFoundException;
+import com.castilleresources.springdemo.model.Employee;
+import com.castilleresources.springdemo.repository.EmployeeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

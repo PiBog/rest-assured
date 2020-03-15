@@ -1,9 +1,9 @@
 /*Bohdan Pysarenko © All right reserved.
  *
  */
-package com.castelli.springdemo;
+package com.castilleresources.springdemo;
 
-import com.castelli.springdemo.model.Employee;
+import com.castilleresources.springdemo.model.Employee;
 import org.springframework.http.*;
 import org.springframework.web.client.RestTemplate;
 
