@@ -31,7 +31,12 @@ Feature: Employee API testing
     When I submit the DELETE request with employee id
     Then I get 200 Status code
 
-  Scenario: Get non-existing employee by id
+  Scenario Outline: Operation with non-existing employee id
     Given I want to execute get employee by id endpoint
-    When I submit the GET request with non-existing employee id
+    When I submit the <request> request with non-existing employee id
     Then I get 404 Status code
+    Examples:
+      | request |
+      | GET     |
+      | PUT     |
+      | DELETE  |

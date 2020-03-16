@@ -12,6 +12,7 @@ import io.cucumber.java.PendingException;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 import io.restassured.response.ValidatableResponse;
 import io.restassured.specification.RequestSpecification;
@@ -33,7 +34,11 @@ public class EmployeeEndpointStepDefs {
 
     @Given("^I want to execute create employee endpoint$")
     public void iWantToExecuteCreateEmployeeEndpoint() throws Throwable {
-        request = given().body("");
+        request = given().contentType(ContentType.JSON).body("{\n" +
+                "\"firstName\": \"BB\",\n" +
+                "\"lastName\": \"King\",\n" +
+                "\"emailId\": \"test3@gmail.com\"\n" +
+                "}");
     }
 
     @When("^I submit the POST request with new employee$")
