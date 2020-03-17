@@ -1,17 +1,15 @@
 package com.castilleresources.springdemo.sql;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.PreparedStatement;
-import java.sql.SQLException;
+import java.sql.*;
 
 public class DbInitializer {
 
-    private static final String DB_URI = "jdbc:h2:mem:testdb";
+    private static final String DB_URI = "jdbc:h2:mem:testdb;DB_CLOSE_DELAY=-1;DATABASE_TO_UPPER=false";
     private static final String USER = "sa";
     private static final String PASS = "sa";
-    private static final String BEFORE_SCRIPT = "INSERT INTO employees (id, email_address, first_name, last_name) VALUES (1, 'test1@gmail.com', 'Gordon', 'Freeman'), (2, 'test2@gmail.com', 'Duke', 'Nukem'), (3, 'test3@gmail.com', 'Serious', 'Sam');";
-    private static final String AFTER_SCRIPT = "TRUNCATE TABLE employees;";
+    private static final String CREATE_TABLE = "CREATE TABLE EMPLOYEES (ID INT, EMAIL_ADDRESS VARCHAR, FIRST_NAME VARCHAR, LAST_NAME VARCHAR);";
+    private static final String POPULATE_SCRIPT = "INSERT INTO EMPLOYEES (ID, EMAIL_ADDRESS, FIRST_NAME, LAST_NAME) VALUES (1, 'test1@gmail.com', 'Gordon', 'Freeman'), (2, 'test2@gmail.com', 'Duke', 'Nukem'), (3, 'test3@gmail.com', 'Serious', 'Sam');";
+    private static final String AFTER_SCRIPT = "DROP TABLE EMPLOYEES;";
 
     private Connection connect() {
         Connection conn = null;
@@ -24,7 +22,11 @@ public class DbInitializer {
     }
 
     public void initDb() {
-        executeSql(BEFORE_SCRIPT);
+        executeSql(CREATE_TABLE);
+    }
+
+    public void populateDb(){
+        executeSql(POPULATE_SCRIPT);
     }
 
     public void cleanDb() {
@@ -35,7 +37,7 @@ public class DbInitializer {
         try (Connection conn = this.connect();
              PreparedStatement pstmt = conn.prepareStatement(sql);
         ) {
-            pstmt.executeUpdate();
+            pstmt.execute();
         } catch (SQLException e) {
             System.out.println(e.getMessage());
         }

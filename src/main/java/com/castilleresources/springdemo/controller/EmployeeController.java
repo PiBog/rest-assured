@@ -28,7 +28,7 @@ import java.util.Map;
 @RequestMapping("/api/v1")
 public class EmployeeController {
 
-    public static final String EMPLOYEE_NOT_FOUND_FOR_THIS_ID = "Employee not found for this id :: ";
+    public static final String EMPLOYEE_NOT_FOUND_FOR_THIS_ID = "Employee not found for this id : ";
     private final EmployeeRepository employeeRepository;
 
     @Autowired
