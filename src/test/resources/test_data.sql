@@ -1,2 +1,0 @@
-INSERT INTO employees (id, email_address, first_name, last_name) VALUES (1, 'test1@gmail.com', 'Gordon', 'Freeman'), (2, 'test2@gmail.com', 'Duke', 'Nukem'), (3, 'test3@gmail.com', 'Serious', 'Sam');
-TRUNCATE employees;

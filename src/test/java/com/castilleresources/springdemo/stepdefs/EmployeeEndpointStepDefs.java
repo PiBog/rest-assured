@@ -3,7 +3,6 @@
  */
 package com.castilleresources.springdemo.stepdefs;
 
-
 import static org.assertj.core.api.Assertions.*;
 
 import com.castilleresources.springdemo.model.Employee;
@@ -34,20 +33,20 @@ public class EmployeeEndpointStepDefs {
     private static final String URL = "http://localhost:8080/api/v1";
     private static final String ENDPOINT = "/employees";
     private static long userId;
-
+/*
     private DbInitializer dbInitializer = new DbInitializer();
 
-//    @Before
-//    public void initDB(){
-//        dbInitializer.initDb();
-//        dbInitializer.populateDb();
-//    }
-//
-//    @After
-//    public void cleanDb(){
-//        dbInitializer.cleanDb();
-//    }
+    @Before
+    public void initDB(){
+        dbInitializer.initDb();
+        dbInitializer.populateDb();
+    }
 
+    @After
+    public void cleanDb(){
+        dbInitializer.cleanDb();
+    }
+*/
     @Given("^I want to execute create employee endpoint$")
     public void iWantToExecuteCreateEmployeeEndpoint() {
         RestAssured.baseURI = URL;
